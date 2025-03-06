@@ -132,11 +132,6 @@ public class ConverseBankPage {
     @FindBy(xpath = "//a[@href='/en/en' and text()='INDIVIDUALS']")
     public WebElement individualsButton;
 
-    public void refreshElements() {
-        LOG.info("Обновление элементов страницы");
-        PageFactory.initElements(driver, this);
-    }
-
     public boolean getC360IsActive() {
         LOG.info("Проверка доступности кнопки 'C360'");
         return c360Button.isEnabled();
